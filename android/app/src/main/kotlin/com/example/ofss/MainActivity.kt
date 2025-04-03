@@ -1,4 +1,4 @@
-package com.csm.biharSams
+package com.csm.biharSamso
 
 import io.flutter.embedding.android.FlutterActivity
 

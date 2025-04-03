@@ -119,7 +119,7 @@ class _Mainpagestate extends State<Mainpage> {
                         ),
                         // onTap: () {
                         //   var app = AppSet();
-                        //   app.androidPackageName = "com.csm.biharSams";
+                        //   app.androidPackageName = "com.csm.biharSamso";
                         //   FlutterInstallAppPlugin.installApp(app);
                         // }
                       ),

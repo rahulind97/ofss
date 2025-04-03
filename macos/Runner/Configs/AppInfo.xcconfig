@@ -8,7 +8,7 @@
 PRODUCT_NAME = ofss
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.csm.biharSams
+PRODUCT_BUNDLE_IDENTIFIER = com.csm.biharSamso
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.

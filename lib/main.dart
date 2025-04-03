@@ -176,7 +176,7 @@ class _SplashScreenState extends State<SplashScreen>
                     IconsButton(
                       onPressed: () async {
                         // LaunchReview.launch(
-                        //   androidAppId: "com.csm.biharSams",
+                        //   androidAppId: "com.csm.biharSamso",
                         //   // iOSAppId: "585027354",
                         // );
                         //startProcedure();

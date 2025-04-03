@@ -1,0 +1,2 @@
+/Users/shailendrachaturvedi/Downloads/ofss/android/app/.cxx/RelWithDebInfo/29v2f596/x86/CMakeFiles/edit_cache.dir
+/Users/shailendrachaturvedi/Downloads/ofss/android/app/.cxx/RelWithDebInfo/29v2f596/x86/CMakeFiles/rebuild_cache.dir

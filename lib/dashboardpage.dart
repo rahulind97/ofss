@@ -163,7 +163,7 @@ class Dashboardstate extends State<Dashboard> {
                     padding: const EdgeInsets.only(left: 160.0),
                     child: InkWell(
                       // onTap: () => LaunchReview.launch(
-                      //   androidAppId: "com.csm.biharSams",
+                      //   androidAppId: "com.csm.biharSamso",
                       //   iOSAppId: "",
                       // ),
                       child: Text(
