@@ -1,0 +1,2 @@
+/Users/shailendrachaturvedi/Downloads/ofss/android/app/.cxx/Debug/6j563j1f/x86/CMakeFiles/edit_cache.dir
+/Users/shailendrachaturvedi/Downloads/ofss/android/app/.cxx/Debug/6j563j1f/x86/CMakeFiles/rebuild_cache.dir
