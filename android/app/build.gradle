@@ -7,7 +7,7 @@ plugins {
 
 android {
 //    namespace = "com.board.attandance"
-    namespace = "com.csm.biharSams"
+    namespace = "com.csm.biharSamso"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
