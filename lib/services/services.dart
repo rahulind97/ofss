@@ -31,7 +31,9 @@ import '../model/slideUpStatusModel.dart';
 
 //String URL = 'http://service.ofssbihar.in/OFSS_MobilityService.svc/'; //live Url
 
-String URL = 'http://service.ofssbihar.org/OFSS_MobilityService.svc/'; // new live Url 2024
+// String URL = 'http://service.ofssbihar.org/OFSS_MobilityService.svc/'; // new live Url 2024
+// String URL = 'http://service.ofssbihar.net/OFSS_MobilityService.svc/'; // new live Url 2025
+String URL = 'http://ofssbihar.net/OFSS_Service/OFSS_MobilityService.svc/'; // new live Url 2025
 
 /*
     ****** This  function is used for Login Data  ******

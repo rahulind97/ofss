@@ -290,7 +290,7 @@ class _CollegeInfostate extends State<CollegeInfo> {
                     ),
                     SizedBox(height: 20),
                     new Container(
-                      height: 45,
+                      height: 40,
                       width: MediaQuery.of(context).size.width / 1.15,
                       child: ElevatedButton(
                         // padding: const EdgeInsets.all(8.0),
@@ -320,32 +320,30 @@ class _CollegeInfostate extends State<CollegeInfo> {
                               print(" block id is>>" + _myBlock);
                               print(" clg id is>>" + _myCollege);
                             });
-                            Constants.instance
-                                .checkInternetConnectivity()
-                                .then((internet) async {
-                              if (internet) {
-                                Navigator.pop(context);
+                            // Constants.instance
+                            //     .checkInternetConnectivity()
+                            //     .then((internet) async {
+                            //   if (internet) {
+                            //     Navigator.pop(context);
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => CollegeInfoList(
-                                          _myDist1,
-                                          _myBlock1.toString() == "null" ||
+                                      builder: (context) => CollegeInfoList(_myDist1, _myBlock1.toString() == "null" ||
                                                   _myBlock1.toString() == "" ||
                                                   _myBlock1.toString() == null
                                               ? "0"
                                               : _myBlock1,
                                           _myCollege)),
                                 );
-                              } else {
-                                print('No internet');
-                                Constants.instance.displayToastmessage(context,
-                                    "You are not connected to internet.Please connect to internet and try again");
-                                /* _displaySnackBarError(
-                              "You are not connected to internet.Please connect to internet and try again");
-                        */
-                              }
-                            });
+                        //       } else {
+                        //         print('No internet');
+                        //         Constants.instance.displayToastmessage(context,
+                        //             "You are not connected to internet.Please connect to internet and try again");
+                        //         /* _displaySnackBarError(
+                        //       "You are not connected to internet.Please connect to internet and try again");
+                        // */
+                        //       }
+                        //     });
                           }
 //                        Navigator.push(
 //                          context,
