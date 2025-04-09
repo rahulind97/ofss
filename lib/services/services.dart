@@ -33,7 +33,10 @@ import '../model/slideUpStatusModel.dart';
 
 // String URL = 'http://service.ofssbihar.org/OFSS_MobilityService.svc/'; // new live Url 2024
 // String URL = 'http://service.ofssbihar.net/OFSS_MobilityService.svc/'; // new live Url 2025
-String URL = 'http://ofssbihar.net/OFSS_Service/OFSS_MobilityService.svc/'; // new live Url 2025
+// String URL = 'http://ofssbihar.net/OFSS_Service/OFSS_MobilityService.svc/'; // new Stagging Url 2025
+
+//String URL = 'http://ofssbihar.net/Ofss_service/OFSS_MobilityService.svc/'; // new live Url 2025
+String URL = 'http://mobileapp.ofssbihar.net/OFSS_Service/OFSS_MobilityService.svc/'; // new live Url 2025
 
 /*
     ****** This  function is used for Login Data  ******
@@ -117,7 +120,6 @@ Future<http.Response> OtpServ(OtpPageModel post) async {
 /*
     ****** This  function is used for Block Data  ******
 */
-
 Future<http.Response> getBlockData() async {
   final response = await http.get(
     Uri.parse(URL + ''),

@@ -48,10 +48,8 @@ class _SeatStrengthState extends State<SeatStrength> {
           i < result["get_College_SubjectDetailsResult"].length;
           i++) {
         setState(() {
-          if (result["get_College_SubjectDetailsResult"][i]['strSubjectList'] !=
-              '0') {
-            mySeatStrengthData
-                .add(result["get_College_SubjectDetailsResult"][i]);
+          if (result["get_College_SubjectDetailsResult"][i]['strSubjectList'] !='0') {
+            mySeatStrengthData.add(result["get_College_SubjectDetailsResult"][i]);
           }
 //          mySeatStrengthData.add(result["get_College_SubjectDetailsResult"][i]);
           print(mySeatStrengthData.length);

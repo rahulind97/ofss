@@ -16,9 +16,11 @@ class ForgotPwd {
    }
 
   Map<String, dynamic> toJson() {
+
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['strCafNo'] = this.strCafNo;
     data['strType'] = this.strType;
+    print("object+data"+data.toString());
     return data;
   }
 

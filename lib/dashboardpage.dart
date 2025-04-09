@@ -573,6 +573,7 @@ class Dashboardstate extends State<Dashboard> {
 
 // This method is used for checking connectivity
   checkconnectivity() async {
+
     var connectivityResult = await (Connectivity().checkConnectivity());
     print(connectivityResult);
     if (connectivityResult == ConnectivityResult.none) {

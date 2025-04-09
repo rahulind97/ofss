@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:ofss/dashboardpage.dart';
 import 'package:ofss/services/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -48,52 +49,68 @@ class _Feedbackstate extends State<Feedbackpage> {
             userEmail: _email.text,
             description: _description.text);
 
-        showprogressBar();
+    //   showprogressBar();
 
         feedbackServ(postdata).then((value) {
           Map result = json.decode(value.body);
-          Navigator.pop(context);
+        Navigator.pop(context);
           print('@@@@@@@@@@@');
           print(result);
           //      Navigator.pop(context);
           if (result['feedbackResult'] != null) {
-            showDialog(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    content: Container(
-                      height: 60,
-                      child: Center(
-                        child: Text(
-                          result["feedbackResult"],
-                          style: TextStyle(color: Colors.green,
-                              fontSize: 20.0),
-                        ),
-                      ),
-                    ),
-                  );
-                });
+            // showDialog(
+            //     context: context,
+            //     builder: (context) {
+            //       return AlertDialog(
+            //         content: Container(
+            //           height: 60,
+            //           child: Center(
+            //             child: Text(
+            //               result["feedbackResult"],
+            //               style: TextStyle(color: Colors.green,
+            //                   fontSize: 20.0),
+            //             ),
+            //           ),
+            //         ),
+            //       );
+            //     });
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(result["feedbackResult"]),
+                backgroundColor: Colors.green,
+                duration: Duration(seconds: 2),
+              ),
+            );
+
+
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Dashboard()),
             );
           } else if (result['feedbackResult'] == null) {
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  content: Container(
-                    height: 60,
-                    child: Center(
-                      child: Text(
-                        "error",
-                        //                    result["error"],
-                        style: TextStyle(color: Colors.red, fontSize: 20.0),
-                      ),
-                    ),
-                  ),
-                );
-              },
+            // showDialog(
+            //   context: context,
+            //   builder: (context) {
+            //     return AlertDialog(
+            //       content: Container(
+            //         height: 60,
+            //         child: Center(
+            //           child: Text(
+            //             "error",
+            //             //                    result["error"],
+            //             style: TextStyle(color: Colors.red, fontSize: 20.0),
+            //           ),
+            //         ),
+            //       ),
+            //     );
+            //   },
+            // );
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(result["error"]),
+                backgroundColor: Colors.red,
+                duration: Duration(seconds: 2),
+              ),
             );
           }
         });
@@ -124,8 +141,7 @@ class _Feedbackstate extends State<Feedbackpage> {
       barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
           content: Container(
             // height: 40.0,
             // margin: EdgeInsets.all(8.0),
@@ -140,6 +156,23 @@ class _Feedbackstate extends State<Feedbackpage> {
               ],
             ),
           ),
+        );
+      },
+    );
+  }
+  static void progressbar(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+
+      builder: (BuildContext context) {
+        return WillPopScope(
+          child:SpinKitDoubleBounce(
+
+            color: Colors.red,
+            size: 50.0,
+          ),
+          onWillPop: () async => false,
         );
       },
     );

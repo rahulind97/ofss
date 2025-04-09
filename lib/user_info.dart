@@ -31,6 +31,7 @@ class _UserInfoState extends State<UserInfo> {
   bool isNodata = false;
 
   String profileImage = "";
+  String profileImageNew = "";
 
   @override
   void initState() {
@@ -44,7 +45,8 @@ class _UserInfoState extends State<UserInfo> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       Map logindata = json.decode(prefs!.getString('LoginData').toString());
-      profileImage= logindata['status'];
+      profileImage= logindata['ImagePath'];
+      // profileImageNew=logindata['ImagePath'];
     });
     print("profileImage>>>>>>>" + profileImage);
   }
@@ -1232,7 +1234,8 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
                                                 // Image radius
                                                 child: profileImage!=""
                                                          ?Image.network(
-                                                    imgPath+ profileImage,
+                                                    profileImage,
+                                                   // "https://bseb.s3.ap-south-1.amazonaws.com/OFSS2025/SAMS/ONLINE_CAF/APPL_IMAGES/2025/9024556604_20250320123533.jpg",
                                                     fit: BoxFit.cover)
                                                 :Icon(Icons.person,size: 40,color: Colors.white,),
                                               ),
@@ -1241,12 +1244,8 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
 
                                           Padding(
                                               padding: EdgeInsets.only(top: 10),
-                                              child: (personalInformation![
-                                                              "mob"] !=
-                                                          "" &&
-                                                      personalInformation![
-                                                              "mob"] !=
-                                                          null
+                                              child: (personalInformation!["mob"] != "" &&
+                                                      personalInformation!["mob"] != null
                                                   ? new Text(
                                                       personalInformation![
                                                           "mob"],

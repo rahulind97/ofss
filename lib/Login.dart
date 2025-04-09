@@ -445,7 +445,8 @@ class _LoginPageState extends State<LoginPage> {
                 result[0]['lstUser'][0]['cafNumber'].toString(),
                 result[0]['lstUser'][0]['status'].toString(),
                 result[0]['lstUser'][0]['strEmail'].toString(),
-                result[0]['lstUser'][0]['username'].toString()
+                result[0]['lstUser'][0]['username'].toString(),
+                result[0]['lstUser'][0]['ImagePath'].toString(),
                 );
           }
         }
@@ -460,7 +461,7 @@ class _LoginPageState extends State<LoginPage> {
 
 //This method is used for storing login data
   Future<void> storeLoginData(String name, String applicantid, String cafNumber,
-      String status, String strEmail, String username) async {
+      String status, String strEmail, String username,String ImagePath) async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
 
     var jsonString1 = {
@@ -470,6 +471,7 @@ class _LoginPageState extends State<LoginPage> {
       "status": status,
       "strEmail": strEmail,
       "username": username,
+      "ImagePath": ImagePath,
     };
 
     String jsonString = jsonEncode(jsonString1);
